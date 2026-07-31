@@ -44,9 +44,20 @@ Every batch below protects that architecture. **Batch 3 is the company.** Do not
 | 8 | `interactive/batch-08-gamification.md` | XP/level math, streaks, quests, mastery map, leagues, achievements | Retention. Built on one progress store. |
 | 9 | `interactive/batch-09-onboarding-roadmap.md` | Goals → adaptive assessment → generated path, roadmap builder, account & analytics | Personalization; needs progress data to exist first. |
 | 10 | `interactive/batch-10-backend-launch.md` | Supabase auth + schema + RLS, sync, admin console, hardening & launch | Last, so the client contract is already frozen. |
+| 11 | `interactive/batch-11-seo-share.md` | Prerendering, per-route meta + JSON-LD, shareable step URLs, embeds, SEO content, funnel analytics | The only batch that brings *new* people. See below — run it early. |
 
 Each batch file contains: **Goal → Prerequisites → numbered copy-paste prompts → Acceptance
 checklist → Known failure modes & repair prompts.**
+
+### Recommended real order (not numeric order)
+
+```
+01 → 02 → 03 → 04 → 05 → 11 → 06 → 07 → 08 → 09 → 10
+```
+
+Batches 6–9 make people **stay**; batch 11 is what makes people **arrive**. A retention feature
+with no traffic retains nobody, so once the visualizer and catalog are real (end of 05), ship the
+growth layer before the deeper learning loop. Strategy and channel reasoning live in `GROWTH.md`.
 
 ---
 
@@ -85,6 +96,8 @@ checklist → Known failure modes & repair prompts.**
 ## Phase 3 (later — do not start early)
 
 Content scale-up to 60+ algorithms via the registry; AI tutor that explains `steps[i]` in natural
-language on demand; "explain my code" diff against the canonical step log; shareable step
-permalinks (`/algorithms/bfs?input=…&step=7`) as the organic-growth loop; classroom/cohort
+language on demand; "explain my code" diff against the canonical step log; classroom/cohort
 dashboards from `campus.md`; mobile app reusing `src/engine` unchanged.
+
+(Shareable step permalinks moved *out* of Phase 3 — they are batch 11, prompt 11.3. They are an
+acquisition mechanic, not a nice-to-have, so they ship with the growth layer.)
