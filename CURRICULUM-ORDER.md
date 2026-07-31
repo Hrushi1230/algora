@@ -117,6 +117,42 @@ Highest interview value per hour of work in the entire product. Nothing new to r
 > patterns that most separate people who pass from people who fail today, and almost nobody
 > teaches them visually. This is your strongest differentiation wedge in the whole catalogue.
 
+### Wave 1B — Strings (8 algos, renderer: `array-cells` — a *mode*, not a new renderer)
+
+A string is a character array. `ArrayView` (batch 4) already auto-switches to labelled cells for
+non-numeric values, so this entire wave costs **zero new renderers** — the cheapest 8 algorithms
+in the whole plan, and among the highest in both interview and search value. This is the best
+value-per-hour block in the catalogue after Wave 1.
+
+| # | Slug | Pattern | I | T | V |
+|---|---|---|---|---|---|
+| S1 | `valid-palindrome` | Two pointers | 5 | 5 | 5 |
+| S2 | `reverse-string` | Two pointers | 4 | 5 | 5 |
+| S3 | `valid-anagram` | Frequency count | 5 | 5 | 4 |
+| S4 | `group-anagrams` | Hashing | 5 | 4 | 4 |
+| S5 | `longest-substring-no-repeat` | Sliding window | 5 | 5 | 5 |
+| S6 | `longest-repeating-char-replacement` | Sliding window | 5 | 3 | 5 |
+| S7 | `minimum-window-substring` | Sliding window | 5 | 4 | 5 |
+| S8 | `longest-palindromic-substring` | Expand around centre | 4 | 5 | 5 |
+
+Notes that matter for the build:
+
+- **S1/S2 are the single best onboarding animation in the product.** Two pointers walking inward
+  over `r-a-c-e-c-a-r` is understandable in three seconds with no prose, in any language. Consider
+  using S1 rather than a sort as the landing-page hero demo.
+- **S5–S7 reuse Wave 1's sliding-window step producer** with a char frequency map. Build them
+  immediately after `sliding-window-dynamic` while that code is still warm — the window
+  visual is identical, only the "is the window valid?" predicate changes.
+- These need one small aux panel: a **character frequency map** (`aux: 'keyvalue'`, already
+  specified in batch 4). No new component.
+- S8 is the exception: expand-around-centre needs two pointers moving *outward* from each centre.
+  Cheap, but visually distinct — and it's a very high-traffic term.
+
+> Strings were missing from the first draft of this list. That was a mistake: string manipulation
+> is one of the top-3 most common interview categories and carries huge search volume
+> (`valid palindrome`, `anagram`). Because they ride the array renderer, they should ship in the
+> MVP, not later.
+
 ### Wave 2 — Grid (6 algos, renderer: `grid`)
 
 The single most-asked *shape* in modern interviews, and the most screenshot-able.
