@@ -7,6 +7,9 @@ You already have **Phase 1**: image-generation prompts (`marketing-remaining.md`
 **Phase 2 is this document:** turning that static site into the best DSA-learning product in the
 world, in ordered batches of copy-paste Lovable prompts.
 
+**Companion docs:** `GROWTH.md` (why students arrive and how they share) and
+`CURRICULUM-ORDER.md` (which 56 algorithms to build, in which order, and which to refuse).
+
 ---
 
 ## The one idea that makes Algora better than every competitor
